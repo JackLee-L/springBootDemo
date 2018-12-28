@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 public class commonServiceImpl implements commonService {
 
     public Object getCommon(String myArray) throws Exception {
-        String address = "http://www.gantanmark.com/gree/services/assetServiceApi?wsdl";
+        String address = "";
         JaxWsDynamicClientFactory factory = JaxWsDynamicClientFactory.newInstance();
         Client client = factory.createClient(address);
         String result = (String) client.invoke("getLocationByCode",/*"gzbh001925-008"*/myArray)[0];
